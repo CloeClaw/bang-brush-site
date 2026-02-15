@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bang Brush — Professional Bang Styling at Home</title>
+<meta name="description" content="The Bang Brush by celebrity hairstylist Danielle Estorino. Precision-designed for perfect bangs at home. $34.99.">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--white:#fff;--gold:#C6B488;--rose:#B76E79;--gray:#f5f3f0;--dark-gray:#888}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--black);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.2}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;background:var(--black);color:var(--white);padding:18px 48px;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s,transform .2s}
+.btn:hover{background:var(--rose);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--black);border:1.5px solid var(--black)}
+.btn-outline:hover{background:var(--black);color:var(--white)}
+.divider{width:60px;height:1.5px;background:var(--gold);margin:24px auto}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06);padding:16px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+nav .logo{font-family:Georgia,'Times New Roman',serif;font-size:1.1rem;letter-spacing:.15em;text-transform:uppercase}
+nav .logo span{color:var(--rose)}
+nav .nav-cta{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);border:1px solid var(--rose);padding:8px 20px;transition:all .3s}
+nav .nav-cta:hover{background:var(--rose);color:var(--white)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;background:linear-gradient(180deg,var(--gray) 0%,var(--white) 100%)}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4rem);max-width:800px;margin:0 auto 24px;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p{font-size:1.15rem;color:#555;max-width:540px;margin:0 auto 40px}
+.hero .price-note{font-size:.85rem;color:var(--dark-gray);margin-top:16px;letter-spacing:.05em}
+
+/* STORY */
+.story{padding:120px 0;background:var(--white)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
+.story h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:32px}
+.story p{color:#444;margin-bottom:20px;font-size:1.05rem}
+.story blockquote{border-left:3px solid var(--gold);padding:20px 0 20px 28px;margin:32px 0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.15rem;color:var(--black);line-height:1.6}
+.story-visual{background:var(--gray);border-radius:4px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:var(--dark-gray);font-size:.85rem;letter-spacing:.1em}
+
+/* FEATURES */
+.features{padding:120px 0;background:var(--gray)}
+.features .section-head{text-align:center;margin-bottom:72px}
+.features h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:8px}
+.features .section-head p{color:#666;font-size:1.05rem}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.feature-card{text-align:center;padding:32px 16px}
+.feature-icon{font-size:2rem;margin-bottom:16px}
+.feature-card h4{font-size:1.1rem;margin-bottom:8px}
+.feature-card p{font-size:.95rem;color:#666;line-height:1.6}
+
+/* CELEBRITY */
+.celebrity{padding:120px 0;background:var(--black);color:var(--white);text-align:center}
+.celebrity .section-label{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.celebrity h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:48px}
+.celebrity .divider{background:var(--gold)}
+.celeb-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;max-width:800px;margin:0 auto 48px}
+.celeb-name{font-family:Georgia,'Times New Roman',serif;font-size:1.15rem;padding:8px 0;color:rgba(255,255,255,.85);position:relative}
+.celeb-name::after{content:'·';margin-left:32px;color:var(--gold)}
+.celeb-name:last-child::after{display:none}
+.celebrity .tagline{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.25rem;color:var(--gold);margin-top:8px}
+
+/* VIDEO */
+.video-section{padding:120px 0;background:var(--white);text-align:center}
+.video-section h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:48px}
+.video-placeholder{max-width:740px;margin:0 auto;aspect-ratio:16/9;background:var(--gray);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden}
+.play-btn{width:72px;height:72px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .3s}
+.play-btn::after{content:'';width:0;height:0;border-style:solid;border-width:12px 0 12px 22px;border-color:transparent transparent transparent var(--white);margin-left:4px}
+.video-placeholder:hover .play-btn{background:var(--rose)}
+.video-placeholder span{font-size:.85rem;color:var(--dark-gray);letter-spacing:.1em;text-transform:uppercase}
+
+/* FINAL CTA */
+.final-cta{padding:120px 0;background:linear-gradient(180deg,var(--white) 0%,var(--gray) 100%);text-align:center}
+.final-cta h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:8px}
+.final-cta .price{font-size:2.4rem;font-family:Georgia,'Times New Roman',serif;color:var(--rose);margin:32px 0 40px}
+.final-cta .shipping{font-size:.85rem;color:var(--dark-gray);margin-top:20px;letter-spacing:.05em}
+
+/* FOOTER */
+footer{padding:48px 0;background:var(--black);color:rgba(255,255,255,.5);text-align:center;font-size:.85rem}
+footer a{color:var(--gold);transition:color .3s}
+footer a:hover{color:var(--rose)}
+footer .footer-links{margin:12px 0;display:flex;justify-content:center;gap:24px}
+footer .footer-domain{color:rgba(255,255,255,.3);margin-top:8px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .story-grid{grid-template-columns:1fr;gap:40px}
+  .story-visual{order:-1;aspect-ratio:3/2}
+  .feature-grid{grid-template-columns:1fr;gap:24px}
+  .celeb-name{font-size:1rem}
+  .btn{padding:16px 36px;font-size:.9rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="#" class="logo">The Bang <span>Brush</span></a>
+    <a href="#buy" class="nav-cta">Shop Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="fade-in">
+    <h1>The Brush Your Bangs Have Been <em>Waiting For</em></h1>
+    <p>Designed by a celebrity hairstylist with 25 years of experience. Professional-quality bang styling, at home.</p>
+    <a href="#buy" class="btn">Get Yours — $34.99</a>
+    <div class="price-note">Free shipping on orders over $50</div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="fade-in">
+        <div class="story-label">The Origin Story</div>
+        <h2>Born from a Celebrity Emergency</h2>
+        <p>When Kimora Lee Simmons called her longtime hairstylist Danielle Estorino in a panic — she'd just cut her own bangs and couldn't style them — Danielle dropped everything to help. But the moment stuck with her.</p>
+        <p>If one of the most glamorous women in fashion couldn't find a way to style her bangs at home, what chance did everyone else have? After searching the market, Danielle discovered the truth: no brush existed that was specifically designed for bangs.</p>
+        <p>So she made one.</p>
+        <blockquote>"I was Kimora Lee Simmons' hairstylist for 15 years. I've styled hair for red carpets, TV sets, and magazine covers. But this brush was born from a simple realization — everyone deserves a tool that makes their bangs look incredible, without needing me in the room."<br><span style="font-style:normal;font-size:.85rem;color:var(--dark-gray);display:block;margin-top:12px">— Danielle Estorino, Creator of The Bang Brush</span></blockquote>
+      </div>
+      <div class="story-visual fade-in">Product photo coming soon</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="section-head fade-in">
+      <h2>Engineered for Bangs</h2>
+      <div class="divider"></div>
+      <p>Every detail designed with one purpose in mind.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✂️</div>
+        <h4>Precision-Sized</h4>
+        <p>Compact barrel designed specifically for the short, layered sections of bangs — not a downsized round brush.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🌀</div>
+        <h4>All Hair Textures</h4>
+        <p>Straight, wavy, curly, coily — The Bang Brush works beautifully with every hair type.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🪶</div>
+        <h4>Soft Natural Bristles</h4>
+        <p>Gentle on delicate bang hair, reducing breakage while creating smooth, salon-quality movement.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💨</div>
+        <h4>Blowout Results</h4>
+        <p>Professional blowout-level styling at home. Volume, shape, and polish in minutes.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✨</div>
+        <h4>Matte Black + Rose Gold</h4>
+        <p>A design as beautiful as the results. Premium matte black with rose gold accents.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💎</div>
+        <h4>25 Years of Expertise</h4>
+        <p>Every curve, bristle, and detail informed by decades of professional celebrity styling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CELEBRITY -->
+<section class="celebrity">
+  <div class="container fade-in">
+    <div class="section-label">The Proof</div>
+    <h2>Trusted by the Stylist Behind</h2>
+    <div class="divider"></div>
+    <div class="celeb-grid">
+      <span class="celeb-name">Kimora Lee Simmons</span>
+      <span class="celeb-name">Queen Latifah</span>
+      <span class="celeb-name">Tyra Banks</span>
+      <span class="celeb-name">Olivia Rodrigo</span>
+      <span class="celeb-name">Giada De Laurentiis</span>
+      <span class="celeb-name">Martin Scorsese</span>
+      <span class="celeb-name">Guy Fieri</span>
+      <span class="celeb-name">Alex Guarnaschelli</span>
+      <span class="celeb-name">Nancy Sinatra</span>
+      <span class="celeb-name">Mario Lopez</span>
+    </div>
+    <p class="tagline">25 years. Hundreds of red carpets. One perfect brush.</p>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="container">
+    <h2 class="fade-in">See It in Action</h2>
+    <div class="divider fade-in"></div>
+    <div class="video-placeholder fade-in">
+      <div class="play-btn"></div>
+      <span>Demo video coming soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="buy">
+  <div class="container fade-in">
+    <h2>Ready to Transform Your Bang Game?</h2>
+    <div class="divider"></div>
+    <div class="price">$34.99</div>
+    <a href="#" class="btn">Get Yours Now</a>
+    <div class="shipping">Free shipping on orders over $50</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>&copy; 2026 The Bang Brush by Danielle Hair Artistry</div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-domain">thebangbrush.com</div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
