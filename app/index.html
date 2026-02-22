@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Best Bang | The Bang Brush</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>The Bang Brush</h1>
+            <p class="tagline">Find Your Best Bang</p>
+        </header>
+
+        <!-- Intro Screen -->
+        <section id="intro" class="screen active">
+            <div class="intro-content">
+                <h2>Discover the Best Bangs for Your Face Shape</h2>
+                <p>After 15 years styling celebrities like Kimora Lee Simmons, Tyra Banks, and Queen Latifah, I've learned that the secret to perfect bangs starts with understanding your face shape.</p>
+                <p class="highlight">Take this quick quiz to get personalized bang recommendations — plus learn how my signature Bang Brush makes styling effortless.</p>
+                <button class="btn-primary" onclick="startQuiz()">Find My Perfect Bangs</button>
+            </div>
+            <div class="credibility">
+                <p>✨ Created by Danielle — Celebrity Hairstylist & Bang Expert</p>
+            </div>
+        </section>
+
+        <!-- Face Shape Quiz -->
+        <section id="quiz" class="screen">
+            <div class="quiz-header">
+                <h2>What's Your Face Shape?</h2>
+                <p>Select the shape that best matches your face. Not sure? Use the guide below each option.</p>
+            </div>
+            
+            <div class="face-shapes">
+                <div class="face-shape-card" onclick="selectFaceShape('oval')">
+                    <div class="shape-icon oval"></div>
+                    <h3>Oval</h3>
+                    <p>Forehead slightly wider than chin, with gentle curves. Face length is about 1.5x the width.</p>
+                </div>
+
+                <div class="face-shape-card" onclick="selectFaceShape('round')">
+                    <div class="shape-icon round"></div>
+                    <h3>Round</h3>
+                    <p>Full cheeks, soft angles. Face width and length are nearly equal with a rounded hairline.</p>
+                </div>
+
+                <div class="face-shape-card" onclick="selectFaceShape('oblong')">
+                    <div class="shape-icon oblong"></div>
+                    <h3>Oblong</h3>
+                    <p>Face is noticeably longer than wide. Forehead, cheeks, and jawline are similar width.</p>
+                </div>
+
+                <div class="face-shape-card" onclick="selectFaceShape('heart')">
+                    <div class="shape-icon heart"></div>
+                    <h3>Heart</h3>
+                    <p>Wide forehead, prominent cheekbones, narrow chin that may come to a point.</p>
+                </div>
+
+                <div class="face-shape-card" onclick="selectFaceShape('square')">
+                    <div class="shape-icon square"></div>
+                    <h3>Square</h3>
+                    <p>Strong, angular jawline. Forehead, cheekbones, and jaw are similar width.</p>
+                </div>
+            </div>
+
+            <button class="btn-secondary" onclick="showIntro()">← Back</button>
+        </section>
+
+        <!-- Results Screen -->
+        <section id="results" class="screen">
+            <div class="results-header">
+                <h2>Your Perfect Bangs</h2>
+                <div class="face-shape-badge" id="resultBadge"></div>
+            </div>
+
+            <div class="results-content" id="resultsContent">
+                <!-- Dynamically populated -->
+            </div>
+
+            <div class="bang-brush-section">
+                <h3>🪥 Style Like a Pro with the Bang Brush</h3>
+                <div class="brush-info">
+                    <p>I designed the Bang Brush after years of clients struggling to style their bangs at home. This tool makes it simple — no matter your hair texture or face shape.</p>
+                    <ul class="brush-benefits">
+                        <li>✓ Compact design for precise control</li>
+                        <li>✓ Works with all hair textures</li>
+                        <li>✓ Tested by celebrity clients</li>
+                        <li>✓ User-friendly for at-home styling</li>
+                    </ul>
+                    <a href="https://www.amazon.com" class="btn-primary" target="_blank">Get the Bang Brush on Amazon</a>
+                </div>
+            </div>
+
+            <div class="story-callout">
+                <p><em>"I remember getting the call to go to Kimora's house — 'bring every brush you have, Kimora just cut her own bangs!' That moment inspired me to create a brush that makes bang styling foolproof."</em></p>
+                <p class="attribution">— Danielle, Celebrity Hairstylist</p>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn-secondary" onclick="startQuiz()">Try Another Shape</button>
+                <button class="btn-outline" onclick="shareResults()">Share My Results</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Danielle Hair Artistry</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="https://daniellehairartistry.com" target="_blank">Website</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
